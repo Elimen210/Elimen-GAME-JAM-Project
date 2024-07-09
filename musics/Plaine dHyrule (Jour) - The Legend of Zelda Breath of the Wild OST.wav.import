@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b45b5pbl8p2je"
+path="res://.godot/imported/Plaine dHyrule (Jour) - The Legend of Zelda Breath of the Wild OST.wav-430dbfe3df812dcef7c861b8c1f4ea77.sample"
+
+[deps]
+
+source_file="res://musics/Plaine dHyrule (Jour) - The Legend of Zelda Breath of the Wild OST.wav"
+dest_files=["res://.godot/imported/Plaine dHyrule (Jour) - The Legend of Zelda Breath of the Wild OST.wav-430dbfe3df812dcef7c861b8c1f4ea77.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
