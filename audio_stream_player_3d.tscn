@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1tuean4cr1cd"]
+
+[ext_resource type="AudioStream" uid="uid://dtxnxg7vi0kq7" path="res://musics/TanES - Fallen.mp3" id="1_j7hyh"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_j7hyh")
+attenuation_model = 3

@@ -18,3 +18,5 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalAudioStreamPlayer="*res://audio_stream_player.tscn"
+AudioStreamPlayer2d1="*res://audio_stream_player2D1.tscn"
+AudioStreamPlayer3d="*res://audio_stream_player_3d.tscn"

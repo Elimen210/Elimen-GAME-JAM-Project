@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2xj4t86x0a1h"
+path="res://.godot/imported/À cheval (Nuit) - The Legend of Zelda Breath of the Wild OST.mp3-ba5f80907f69363ce3cc7d4cc5561474.mp3str"
+
+[deps]
+
+source_file="res://musics/À cheval (Nuit) - The Legend of Zelda Breath of the Wild OST.mp3"
+dest_files=["res://.godot/imported/À cheval (Nuit) - The Legend of Zelda Breath of the Wild OST.mp3-ba5f80907f69363ce3cc7d4cc5561474.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

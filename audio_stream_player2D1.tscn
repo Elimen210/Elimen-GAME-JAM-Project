@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://be2fnfl7f2cwb"]
+
+[ext_resource type="AudioStream" uid="uid://cy0j8yix8gxeu" path="res://musics/Field Battle (The Legend of Zelda Breath of the Wild OST).mp3" id="1_rscx4"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_rscx4")
