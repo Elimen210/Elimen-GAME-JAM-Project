@@ -13,24 +13,24 @@ var lastLookAtDirection : Vector3
 @onready var twist_pivot := $TwistPivot
 @onready var pitch_pivot := $TwistPivot/PitchPivot
 var buildSfx
+@onready var cam = get_node("/root/Node3D/MeshInstance3D52/Camera")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 func _process(delta: float) -> void:
-	
 	var input = Vector3.ZERO
 	input.x = Input.get_axis("ui_left", "ui_right")
 	input.z = Input.get_axis("ui_up", "ui_down")
 	input.y = Input.get_axis("ui_accept", "move_forward")
-	if Input.is_action_just_pressed("ui_accept") and not get_colliding_bodies():
+	if Input.is_action_just_pressed("ui_accept") and !get_colliding_bodies():
 		input.y = JUMP_VELOCITY * gravity
-	
+	if Input.is_action_pressed("KEY_L"):
+		apply_impulse(Vector3(), Vector3(-cam.global_transform_basis.z))
 		
 	apply_central_force(twist_pivot.basis * input * 1200.0 * delta)
 	
 	twist_pivot.rotate_y(twist_input)
-	pitch_pivot.rotate_x(pitch_input)
 	pitch_pivot.rotation.x = clamp(pitch_pivot.rotation.x,
 		deg_to_rad(-30),
 		deg_to_rad(30)
@@ -41,13 +41,11 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
-	$WeaponAnimationPlayer.get_animation_library("[Global]").get_animation("mixamo.com"))
-	$WeaponAnimationPlayer.play("weapon_attack")
-	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			twist_input = - event.relative.x * mouse_sensitivity
 			pitch_input = - event.relative.x * mouse_sensitivity
+
 
 
