@@ -1,5 +1,6 @@
-[gd_scene load_steps=46 format=3 uid="uid://dx8q40cuirrqd"]
+[gd_scene load_steps=47 format=3 uid="uid://dx8q40cuirrqd"]
 
+[ext_resource type="Script" path="res://node_3d.gd" id="1_4glol"]
 [ext_resource type="PackedScene" uid="uid://bfwd16go0gd1l" path="res://player.tscn" id="1_yr6h6"]
 [ext_resource type="Script" path="res://MeshInstance3D26.gd" id="2_70t7r"]
 
@@ -164,6 +165,7 @@ uv1_world_triplanar = true
 material = SubResource("StandardMaterial3D_0uvad")
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_4glol")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_wfns0")
@@ -776,13 +778,14 @@ transform = Transform3D(-1, -9.59233e-14, -8.74228e-08, -2.61867e-08, 0.954084, 
 fov = 95.0
 
 [node name="ProgressBar" type="ProgressBar" parent="Character/TwistPivot/PitchPivot/Camera3D"]
-offset_left = 38.0
-offset_top = 59.0
-offset_right = 616.0
-offset_bottom = 90.0
+offset_left = 43.0
+offset_top = 40.0
+offset_right = 432.0
+offset_bottom = 65.0
 theme_override_styles/background = SubResource("StyleBoxFlat_mleq8")
 theme_override_styles/fill = SubResource("StyleBoxFlat_h13p4")
 value = 100.0
+show_percentage = false
 
 [node name="CameraController" type="Node3D" parent="."]
 
@@ -1973,6 +1976,12 @@ transform = Transform3D(22.8352, 0, 0, 0, 0.999757, -0.635472, 0, 0.0220417, 28.
 mesh = SubResource("BoxMesh_b8tvp")
 
 [node name="RayCast3D" type="RayCast3D" parent="MeshInstance3D239"]
+
+[node name="MeshInstance3D240" type="MeshInstance3D" parent="."]
+transform = Transform3D(22.8352, 0, 0, 0, 0.999757, -0.635472, 0, 0.0220417, 28.8234, -0.167892, -21.4798, 153.983)
+mesh = SubResource("BoxMesh_b8tvp")
+
+[node name="RayCast3D" type="RayCast3D" parent="MeshInstance3D240"]
 
 [node name="MeshInstance3D229" type="MeshInstance3D" parent="."]
 transform = Transform3D(-5.12352e-07, 0.0229043, 41.3495, 0, 1.0093, -0.938351, -11.7213, -1.00118e-09, -1.80744e-06, 15.8664, -7.56899, 196.531)
